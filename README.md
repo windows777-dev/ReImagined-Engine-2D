@@ -3,6 +3,20 @@
 * Built for performance and simplicity with python
 * Built off of raylib
 * Comes with a GUI wrapper
+* Zero Generative-AI content
+
+## ⚠ BEFORE YOU READ ⚠
+**PLEASE** make sure you understand raylib before you use this project. For text labels, just use draw_text or draw_text_ex.
+
+[Raylib Documentation](https://www.raylib.com/cheatsheet/cheatsheet.html)
+
+Just to save you some time if you only don't understand text labels look here:
+
+The order is: Font, Text, Position, Font Size, Letter Spacing and Colour
+
+`draw_text_ex(FontHelper.GetFontPath("Fredoka-SemiBold.ttf"), "Test", Vector2(20, 20), 14, 1.0, RED)`
+
+**IT MUST GO IN THAT ORDER!!** Anything else and it crashes.
 
 ## Painfully easy
 `Button = Button()` 
@@ -66,3 +80,4 @@ Now, by adding a command parameter you can make the button actually do something
 `test_button = Button(x=test_frame.x + (test_frame.width - 300) / 2, y=test_frame.y + 50, animation_growth_size=1, font_size=36, font_path=FontHelper.GetFontPath("Fredoka-SemiBold.ttf"), text="Play", command=lambda: draw_text("Pressed!", 200, 200, 36, RED))`
 
 ![Button pressed](assets/gallery/button-press.gif)
+
