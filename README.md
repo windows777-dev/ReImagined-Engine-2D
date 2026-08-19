@@ -60,3 +60,9 @@ while not window_should_close():
 close_window()
 
 ```
+
+Now, by adding a command parameter you can make the button actually do something!
+
+`test_button = Button(x=test_frame.x + (test_frame.width - 300) / 2, y=test_frame.y + 50, animation_growth_size=1, font_size=36, font_path=FontHelper.GetFontPath("Fredoka-SemiBold.ttf"), text="Play", command=lambda: draw_text("Pressed!", 200, 200, 36, RED))`
+
+![Button pressed](assets/gallery/button-press.gif)

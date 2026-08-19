@@ -18,7 +18,7 @@ bg = WindowUtils.GetBackground("yes.png")
 
 
 test_frame = Frame(x=(get_screen_width() - 500) / 2, y=(get_screen_height() - 500) / 2)
-test_button = Button(x=test_frame.x + (test_frame.width - 300) / 2, y=test_frame.y + 50, animation_growth_size=1, font_size=36, font_path=FontHelper.GetFontPath("Fredoka-SemiBold.ttf"), text="Play")
+test_button = Button(x=test_frame.x + (test_frame.width - 300) / 2, y=test_frame.y + 50, animation_growth_size=1, font_size=36, font_path=FontHelper.GetFontPath("Fredoka-SemiBold.ttf"), text="Play", command=lambda: draw_text("Pressed!", 200, 200, 36, RED))
 test_actor = Actor("aaron-wilder", 500, 500)
 
 fredoka = FontHelper.LoadFont("Fredoka-SemiBold.ttf")
@@ -28,6 +28,7 @@ def draw():
     test_frame.draw()
     test_button.draw()
     #test_actor.draw()
+    
 
 def update():
     pass
