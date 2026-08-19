@@ -24,10 +24,10 @@ test_actor = Actor("aaron-wilder", 500, 500)
 fredoka = FontHelper.LoadFont("Fredoka-SemiBold.ttf")
 
 def draw():
-    WindowUtils.SetBackground(bg)
+    #WindowUtils.SetBackground(bg)
     test_frame.draw()
     test_button.draw()
-    test_actor.draw()
+    #test_actor.draw()
 
 def update():
     pass
