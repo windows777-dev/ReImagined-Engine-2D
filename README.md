@@ -9,7 +9,10 @@
 **PLEASE** make sure you understand raylib before you use this project. For text labels, just use draw_text or draw_text_ex.
 
 [Raylib Documentation](https://www.raylib.com/cheatsheet/cheatsheet.html)
+
 **HUGE** credit to the raylib devs, please check it out. Seriously, it's an amazing framework.
+
+Another **HUGE** credit to the pyray developers as well; they made this possible and they did one amazing job at porting raylib to python.
 
 Just to save you some time if you only don't understand text labels look here:
 
