@@ -3,3 +3,6 @@
 * Built for performance and simplicity with python
 * Built off of raylib
 * Comes with a GUI wrapper
+
+## Painfully easy
+# Main menus made simple.
