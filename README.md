@@ -17,6 +17,6 @@
 ![Screenshot of UI](assets/gallery/button-screenshot.png)
 
 # Button Behaviour
-<video src="assets/gallery/button.mp4" controls width="100%"></video>
+![Button Growth Animation](assets/gallery/button.gif)
 
 **Incredible!** Just like that you have a good looking play button! Obviously, the button doesn't come with the frame but I added that just to help you visualise it.
