@@ -30,6 +30,7 @@ class Actor:
     def set_y(self, y):
         self.rect.y = y
 
+
     def get_left(self):
         return self.rect.x
     def set_left(self, x):

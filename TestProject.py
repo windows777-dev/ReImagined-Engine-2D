@@ -6,6 +6,7 @@ from UI.font_helper import *
 from Utilities.timer import *
 from Utilities.window_funcs import *
 from Utilities.actor import *
+from Tween.tweenhelper import *
 
 init_window(Configuration.WIDTH, Configuration.HEIGHT, Configuration.TITLE)
 set_target_fps(120)
@@ -23,11 +24,20 @@ test_actor = Actor("aaron-wilder", 500, 500)
 
 fredoka = FontHelper.LoadFont("Fredoka-SemiBold.ttf")
 
+actor_tween = Tween(tween_type=TweenType.LINEAR, position=Vector2(test_actor.x, test_actor.y), final_position=Vector2(700, 700), speed=1.0)
+
 def draw():
-    #WindowUtils.SetBackground(bg)
+    WindowUtils.SetBackground(bg)
+    clear_background(GRAY)
+    
     test_frame.draw()
     test_button.draw()
-    #test_actor.draw()
+
+    actor_tween.update()
+    test_actor.x = actor_tween.position.x
+    test_actor.y = actor_tween.position.y
+
+    test_actor.draw()
     
 
 def update():

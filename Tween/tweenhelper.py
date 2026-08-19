@@ -24,12 +24,15 @@ class Tween:
         match self.tween_type:
             case TweenType.LINEAR:
                 if self.position < self.final_position:
-                        self.position += (self.final_position - self.position) * self.speed * Configuration.dt
+                        self.position.x += (self.final_position.x - self.position.x) * self.speed * Configuration.dt
+                        self.position.y += (self.final_position.y - self.position.y) * self.speed * Configuration.dt
 
             case TweenType.EXPONENTIAL:
-                  distance = self.final_position - self.position
+                dx = self.final_position.x - self.position.x
+                dy = self.final_position.y - self.position.y
 
-                  self.position += distance * self.speed * Configuration.dt
+                self.position.x += dx * self.speed * Configuration.dt
+                self.position.y += dy * self.speed * Configuration.dt
         
         
 
