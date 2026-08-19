@@ -14,6 +14,9 @@
 
 `test_button = Button(x=test_frame.x + (test_frame.width - 300) / 2, y=test_frame.y + 50, animation_growth_size=1, font_size=36, font_path=FontHelper.GetFontPath("Fredoka-SemiBold.ttf"), text="Play")` 
 
-![Screenshot of UI](button-screenshot.png)
+![Screenshot of UI](assets/gallery/button-screenshot.png)
+
+# Button Behaviour
+<video src="assets/gallery/button.mp4" controls width="100%"></video>
 
 **Incredible!** Just like that you have a good looking play button! Obviously, the button doesn't come with the frame but I added that just to help you visualise it.
