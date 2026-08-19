@@ -4,6 +4,7 @@
 * Built off of raylib
 * Comes with a GUI wrapper
 * Zero Generative-AI content
+* Tweening system
 
 ## ⚠ BEFORE YOU READ ⚠
 **PLEASE** make sure you understand raylib before you use this project. For text labels, just use draw_text or draw_text_ex.
@@ -22,7 +23,9 @@ The order is: Font, Text, Position, Font Size, Letter Spacing and Colour
 
 **IT MUST GO IN THAT ORDER!!** Anything else and it crashes.
 
-## Painfully easy
+On that note, lets continue to the rest of the documentation.
+
+## Ease of Use
 `Button = Button()` 
 **BOOM!** You have just created a button, obviously you can customise it but just like that you have a nice-looking button on your screen.
 

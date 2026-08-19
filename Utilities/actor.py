@@ -4,7 +4,7 @@ import os
 class Actor:
 
     def __init__(self, image, inx=0, iny=0):
-        super(Actor, self) # No idea what this does but robert said so therefore ima do it
+        super(Actor, self)
         self.surf = pr.load_texture(os.path.join("assets", "sprites", image+".png"))
 
         self.rect = pr.Rectangle(inx, iny, self.surf.width, self.surf.height)
