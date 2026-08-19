@@ -22,8 +22,8 @@
 **Incredible!** Just like that you have a good looking play button! Obviously, the button doesn't come with the frame but I added that just to help you visualise it.
 
 # Full code for the scene
-`
 
+```
 from pyray import *
 from config import *
 from UI.button import *
@@ -72,6 +72,4 @@ while not window_should_close():
     
 close_window()
 
-
-
-`
+```
