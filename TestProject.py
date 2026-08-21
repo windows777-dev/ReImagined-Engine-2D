@@ -8,12 +8,14 @@ from Utilities.window_funcs import *
 from Utilities.actor import *
 from Tween.tweenhelper import *
 
+
 init_window(Configuration.WIDTH, Configuration.HEIGHT, Configuration.TITLE)
 set_target_fps(120)
 toggle_fullscreen()
 
 icon = load_image("ElixrFC_Icon.png")
 set_window_icon(icon)
+
 
 bg = WindowUtils.GetBackground("yes.png")
 
@@ -32,7 +34,7 @@ def draw():
     
     test_frame.draw()
     test_button.draw()
-
+    
     actor_tween.update()
     test_actor.x = actor_tween.position.x
     test_actor.y = actor_tween.position.y
