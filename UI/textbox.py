@@ -2,7 +2,7 @@ import pyray as pr
 from UI.font_helper import *
 
 class TextBox:
-    def __init__(self, x=20, y=20, width=300, height=150, text="Enter text here...", font=FontHelper.GetFontPath("Fredoka-Semibold.ttf"), font_size=24, text_colour=pr.BLACK, highlighted_colour=pr.BLUE, text_highlighted_colour = pr.BLUE, background_colour=pr.WHITE, smoothness=0.1, border_size=5):
+    def __init__(self, x=20, y=20, width=300, height=50, text="Enter text here...", font=FontHelper.GetFontPath("Fredoka-Semibold.ttf"), font_size=24, text_colour=pr.BLACK, highlighted_colour=pr.BLUE, text_highlighted_colour = pr.BLUE, background_colour=pr.WHITE, smoothness=0.1, border_size=5):
         self.x = x
         self.y = y
         self.width = width
