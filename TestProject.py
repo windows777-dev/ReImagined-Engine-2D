@@ -4,6 +4,7 @@ from UI.button import *
 from UI.frame import *
 from UI.font_helper import *
 from UI.textbox import *
+from UI.slider import *
 from Utilities.timer import *
 from Utilities.window_funcs import *
 from Utilities.actor import *
@@ -25,6 +26,7 @@ test_frame = Frame(x=(get_screen_width() - 500) / 2, y=(get_screen_height() - 50
 test_button = Button(x=test_frame.x + (test_frame.width - 300) / 2, y=test_frame.y + 50, animation_growth_size=1, font_size=36, font_path=FontHelper.GetFontPath("Fredoka-SemiBold.ttf"), text="Play", command=lambda: draw_text("Pressed!", 200, 200, 36, RED))
 test_actor = Actor("aaron-wilder", 500, 500)
 test_tb = TextBox()
+test_slider = Slider()
 
 fredoka = FontHelper.LoadFont("Fredoka-SemiBold.ttf")
 
@@ -42,7 +44,8 @@ def draw():
     test_actor.y = actor_tween.position.y
 
     test_actor.draw()
-    test_tb.draw()
+    test_slider.draw()
+    #test_tb.draw()
     
 
 def update():
