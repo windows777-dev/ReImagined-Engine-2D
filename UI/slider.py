@@ -36,5 +36,3 @@ class Slider:
         pr.draw_circle(int(self.slider_x), int(self.y + self.slider_point_radius - 3), self.slider_point_radius + 10, pr.BLACK)
         pr.draw_circle(int(self.slider_x), int(self.y + self.slider_point_radius - 3), self.slider_point_radius, self.slider_colour)
         
-
-        print(self.value)
