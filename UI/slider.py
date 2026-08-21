@@ -33,6 +33,6 @@ class Slider:
         pr.draw_rectangle_rounded(pr.Rectangle(self.x, self.y, self.width, self.height), 1,  4, self.background_colour)
         pr.draw_rectangle_rounded_lines_ex(pr.Rectangle(self.x, self.y, self.width, self.height), 1, 4, 5, pr.BLACK)
 
-        pr.draw_circle(int(self.slider_x), int(self.y + self.slider_point_radius - 3), self.slider_point_radius + 10, pr.BLACK)
+        pr.draw_circle(int(self.slider_x), int(self.y + self.slider_point_radius - 3), self.slider_point_radius + 5, pr.BLACK)
         pr.draw_circle(int(self.slider_x), int(self.y + self.slider_point_radius - 3), self.slider_point_radius, self.slider_colour)
         
