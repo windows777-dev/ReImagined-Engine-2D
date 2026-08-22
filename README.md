@@ -25,7 +25,7 @@ The order is: Font, Text, Position, Font Size, Letter Spacing and Colour
 
 On that note, lets continue to the rest of the documentation.
 
-###UI Elements
+## UI Elements
 
 To see the actual source code for the elements, go into the UI folder.
 
@@ -100,7 +100,7 @@ Frames are incredibly self explanatory and really easy to make.
 
 Just look at that! You have a frame with 2 lines of code (not forgetting the .draw() for it in the render loop)
 
-![Button pressed](assets/gallery/frame.png)
+![Frame preview](assets/gallery/frame.png)
 
 (The frame only looks grey because Windows kept bugging when I tried to screenshot it)
 
@@ -108,7 +108,32 @@ Just look at that! You have a frame with 2 lines of code (not forgetting the .dr
 
 # Sliders
 
+Sliders were a pain to make, but now they look smooth and really nice.
+Same as always, its just 2 lines of code!
+
+`test_slider = Slider(x=(Configuration.WIDTH - 300) / 2, y=(Configuration.HEIGHT - 50) / 2)`
+
+(Don't forget the .draw in the render loop!)
+
+Now you have a cool slider for settings! It also has a .value so you can extract that for configs!
+
+![Slider preview](assets/gallery/slider.gif)
+
 # Textboxes
+
+Textboxes were actually pretty easy to make in raylib over pygame.
+They still need some implementations to make it foolproof but it works for now!
+
+`test_tb = TextBox(x=500, y=500)`
+
+![Textbox preview](assets/gallery/text_box.gif)
+
+You can actually change what the inside of the textbox says.
+It says "Enter Text Here..." now but let's change it to "Enter username here..."
+
+`test_tb = TextBox(x=500, y=500, text="Enter username here...")`
+
+Easy, just like that!
 
 # Checkboxes
 
