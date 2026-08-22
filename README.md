@@ -25,7 +25,7 @@ The order is: Font, Text, Position, Font Size, Letter Spacing and Colour
 
 On that note, lets continue to the rest of the documentation.
 
-## Ease of Use
+## Buttons
 `Button = Button()` 
 **BOOM!** You have just created a button, obviously you can customise it but just like that you have a nice-looking button on your screen.
 
@@ -87,4 +87,12 @@ Now, by adding a command parameter you can make the button actually do something
 `test_button = Button(x=test_frame.x + (test_frame.width - 300) / 2, y=test_frame.y + 50, animation_growth_size=1, font_size=36, font_path=FontHelper.GetFontPath("Fredoka-SemiBold.ttf"), text="Play", command=lambda: draw_text("Pressed!", 200, 200, 36, RED))`
 
 ![Button pressed](assets/gallery/button-press.gif)
+
+## Frames
+
+## Sliders
+
+## Textboxes
+
+## Checkboxes
 
