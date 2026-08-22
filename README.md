@@ -134,6 +134,7 @@ It says "Enter Text Here..." now but let's change it to "Enter username here..."
 `test_tb = TextBox(x=500, y=500, text="Enter username here...")`
 
 Easy, just like that!
+(Don't forget the .draw() in the render loop!)
 
 # Checkboxes
 
