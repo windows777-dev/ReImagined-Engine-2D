@@ -1,8 +1,8 @@
 import pyray as pr
 
 class Configuration:
-    WIDTH = 800
-    HEIGHT = 600
+    WIDTH = pr.get_monitor_width(1)
+    HEIGHT = pr.get_monitor_height(1)
     TITLE = "Wallahis left: 1"
     mode = "main_menu"
 

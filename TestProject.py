@@ -10,10 +10,10 @@ from Utilities.window_funcs import *
 from Utilities.actor import *
 from Tween.tweenhelper import *
 
-
+set_config_flags(ConfigFlags.FLAG_BORDERLESS_WINDOWED_MODE);
 init_window(Configuration.WIDTH, Configuration.HEIGHT, Configuration.TITLE)
 set_target_fps(120)
-toggle_fullscreen()
+
 
 icon = load_image("ElixrFC_Icon.png")
 set_window_icon(icon)
@@ -33,18 +33,17 @@ fredoka = FontHelper.LoadFont("Fredoka-SemiBold.ttf")
 actor_tween = Tween(tween_type=TweenType.LINEAR, position=Vector2(test_actor.x, test_actor.y), final_position=Vector2(700, 700), speed=1.0)
 
 def draw():
-    WindowUtils.SetBackground(bg)
     clear_background(GRAY)
     
     test_frame.draw()
-    test_button.draw()
+    #test_button.draw()
     
-    actor_tween.update()
+    #actor_tween.update()
     test_actor.x = actor_tween.position.x
     test_actor.y = actor_tween.position.y
 
-    test_actor.draw()
-    test_slider.draw()
+    #test_actor.draw()
+    #test_slider.draw()
     #test_tb.draw()
     
 

@@ -25,6 +25,10 @@ The order is: Font, Text, Position, Font Size, Letter Spacing and Colour
 
 On that note, lets continue to the rest of the documentation.
 
+### UI Elements
+
+To see the actual source code for the elements, go into the UI folder.
+
 ## Buttons
 `Button = Button()` 
 **BOOM!** You have just created a button, obviously you can customise it but just like that you have a nice-looking button on your screen.
@@ -89,6 +93,18 @@ Now, by adding a command parameter you can make the button actually do something
 ![Button pressed](assets/gallery/button-press.gif)
 
 ## Frames
+
+Frames are incredibly self explanatory and really easy to make.
+
+`test_frame = Frame(x=(get_screen_width() - 500) / 2, y=(get_screen_height() - 500) / 2)`
+
+Just look at that! You have a frame with 2 lines of code (not forgetting the .draw() for it in the render loop)
+
+![Button pressed](assets/gallery/frame.png)
+
+(The frame only looks grey because Windows kept bugging when I tried to screenshot it)
+
+
 
 ## Sliders
 
