@@ -9,5 +9,7 @@ class FontHelper:
 
     @staticmethod
     def LoadFont(font_path):
-        return pr.load_font_ex(os.path.join("assets", "fonts", font_path), 64, None, 0)
+        font = pr.load_font_ex(os.path.join("assets", "fonts", font_path), 64, None, 0)
+        pr.set_texture_filter(font.texture, pr.TextureFilter.TEXTURE_FILTER_POINT)
+        return font
     
