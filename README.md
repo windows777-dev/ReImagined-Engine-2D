@@ -25,11 +25,11 @@ The order is: Font, Text, Position, Font Size, Letter Spacing and Colour
 
 On that note, lets continue to the rest of the documentation.
 
-### UI Elements
+###UI Elements
 
 To see the actual source code for the elements, go into the UI folder.
 
-## Buttons
+# Buttons
 `Button = Button()` 
 **BOOM!** You have just created a button, obviously you can customise it but just like that you have a nice-looking button on your screen.
 
@@ -92,7 +92,7 @@ Now, by adding a command parameter you can make the button actually do something
 
 ![Button pressed](assets/gallery/button-press.gif)
 
-## Frames
+# Frames
 
 Frames are incredibly self explanatory and really easy to make.
 
@@ -106,9 +106,10 @@ Just look at that! You have a frame with 2 lines of code (not forgetting the .dr
 
 
 
-## Sliders
+# Sliders
 
-## Textboxes
+# Textboxes
 
-## Checkboxes
+# Checkboxes
 
+## Utilities
