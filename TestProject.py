@@ -5,6 +5,7 @@ from UI.frame import *
 from UI.font_helper import *
 from UI.textbox import *
 from UI.slider import *
+from UI.text import *
 from Utilities.timer import *
 from Utilities.window_funcs import *
 from Utilities.actor import *
@@ -27,6 +28,7 @@ test_button = Button(x=test_frame.x + (test_frame.width - 300) / 2, y=test_frame
 test_actor = Actor("aaron-wilder", 500, 500)
 test_tb = TextBox(x=500, y=500)
 
+test_text = Text(x=500, y=500, text="TestText", font_size=72)
 
 test_slider = Slider(x=500, y=500)
 
@@ -46,8 +48,8 @@ def draw():
 
     #test_actor.draw()
     #test_slider.draw()
-    test_tb.draw()
-    
+    #test_tb.draw()
+    test_text.draw()
 
 def update():
     pass

@@ -104,6 +104,13 @@ Just look at that! You have a frame with 2 lines of code (not forgetting the .dr
 
 (The frame only looks grey because Windows kept bugging when I tried to screenshot it)
 
+# Text Labels
+
+Pretty simple. It's text for crying out loud
+
+`test_text = Text(x=500, y=500, text="TestText", font_size=72)`
+
+![Text preview](assets/gallery/text.png)
 
 
 # Sliders

@@ -3,7 +3,7 @@ from UI.font_helper import *
 
 class Text:
 
-    def __init__(self, x=20, y=20, text="TextLabel", font=FontHelper.GetFontPath("NotoSansGothic-Regular.ttf"), font_size=18, colour=pr.BLACK):
+    def __init__(self, x=20, y=20, text="TextLabel", font="Montserrat-ExtraBold.ttf", font_size=18, colour=pr.BLACK):
         self.text = text
         self.font = FontHelper.LoadFont(font)
         self.x=x
