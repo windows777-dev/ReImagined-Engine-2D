@@ -11,7 +11,7 @@ from Utilities.window_funcs import *
 from Utilities.actor import *
 from Tween.tweenhelper import *
 
-set_config_flags(ConfigFlags.FLAG_BORDERLESS_WINDOWED_MODE);
+set_config_flags(ConfigFlags.FLAG_BORDERLESS_WINDOWED_MODE)
 init_window(Configuration.WIDTH, Configuration.HEIGHT, Configuration.TITLE)
 set_target_fps(120)
 
