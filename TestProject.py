@@ -9,6 +9,8 @@ from UI.text import *
 from Utilities.timer import *
 from Utilities.window_funcs import *
 from Utilities.actor import *
+from EventManager.event import *
+from EventManager.eventmanager import *
 from Tween.tweenhelper import *
 
 set_config_flags(ConfigFlags.FLAG_BORDERLESS_WINDOWED_MODE)
@@ -21,6 +23,8 @@ set_window_icon(icon)
 
 
 bg = WindowUtils.GetBackground("yes.png")
+
+event_mgr = EventManager()
 
 
 test_frame = Frame(x=(get_screen_width() - 500) / 2, y=(get_screen_height() - 500) / 2)
@@ -36,6 +40,8 @@ fredoka = FontHelper.LoadFont("Fredoka-SemiBold.ttf")
 
 actor_tween = Tween(tween_type=TweenType.LINEAR, position=Vector2(test_actor.x, test_actor.y), final_position=Vector2(700, 700), speed=1.0)
 
+test_event = Event("test_event")
+
 def draw():
     clear_background(GRAY)
     
@@ -46,13 +52,22 @@ def draw():
     test_actor.x = actor_tween.position.x
     test_actor.y = actor_tween.position.y
 
+    
+
     #test_actor.draw()
     #test_slider.draw()
     #test_tb.draw()
     test_text.draw()
 
 def update():
-    pass
+
+    if get_random_value(0, 5) == 2:
+        test_event.invoke()
+
+    if event_mgr.invoked("test_event"):
+        close_window()
+
+    event_mgr.update()
 
 
 while not window_should_close():
