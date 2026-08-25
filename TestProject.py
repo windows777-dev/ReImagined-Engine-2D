@@ -6,6 +6,7 @@ from UI.font_helper import *
 from UI.textbox import *
 from UI.slider import *
 from UI.text import *
+from UI.listbox import *
 from Utilities.timer import *
 from Utilities.window_funcs import *
 from Utilities.actor import *
@@ -41,6 +42,9 @@ fredoka = FontHelper.LoadFont("Fredoka-SemiBold.ttf")
 actor_tween = Tween(tween_type=TweenType.LINEAR, position=Vector2(test_actor.x, test_actor.y), final_position=Vector2(700, 700), speed=1.0)
 
 test_event = Event(name="te")
+test_listbox = Listbox()
+test_listbox.add_element("Tom pearl")
+test_listbox.add_element("Tom pear1l")
 
 event_mgr.register_event(test_event)
 
@@ -54,12 +58,12 @@ def draw():
     test_actor.x = actor_tween.position.x
     test_actor.y = actor_tween.position.y
 
-    
+    test_listbox.draw()
 
     #test_actor.draw()
     #test_slider.draw()
     #test_tb.draw()
-    test_text.draw()
+    #test_text.draw()
 
 def update():
 
