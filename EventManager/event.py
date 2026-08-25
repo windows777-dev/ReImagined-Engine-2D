@@ -7,6 +7,9 @@ class Event:
         self.name = name
         self.invoked = False
         self.life_time = 0.0
+        self.data = {}
+        
 
-    def invoke(self):
+    def invoke(self, **kwargs):
         self.invoked = True
+        self.data = kwargs
