@@ -4,7 +4,7 @@ from UI.font_helper import *
 
 class Listbox:
 
-    def __init__(self, x=20, y=20, width=500, height=700, corner_radius=0.1, border_radius=5, font=FontHelper.GetFontPath("Montserrat-ExtraBold.ttf"), font_size=24, pady=10, element_height=50, bg_colour=Color(255,255,255,255), element_colour=Color(58,58,58,255), hover_colour=Color(62, 108, 249, 255), element_text_colour = Color(255,255,255,255)):
+    def __init__(self, x=20, y=20, width=500, height=700, corner_radius=0.1, border_radius=5, font=F"Montserrat-ExtraBold.ttf", font_size=24, pady=10, element_height=50, bg_colour=Color(255,255,255,255), element_colour=Color(58,58,58,255), hover_colour=Color(62, 108, 249, 255), element_text_colour = Color(255,255,255,255)):
         self.x = x
         self.y = y
         self.width = width
@@ -61,7 +61,8 @@ class Listbox:
                 break
 
     def update(self):
-        self.offset_y -= int(get_mouse_wheel_move() * 4)
+        if check_collision_point_rec(get_mouse_position(), Rectangle(self.x, self.y, self.width, self.height)):
+            self.offset_y -= int(get_mouse_wheel_move() * 7)
         
     def draw(self):
         self.update()
@@ -70,6 +71,7 @@ class Listbox:
         draw_rectangle_rounded(Rectangle(self.x, self.y, self.width, self.height), self.corner_radius, 4, self.bg_colour)
         draw_rectangle_rounded_lines_ex(Rectangle(self.x, self.y, self.width, self.height), self.corner_radius, 4, self.border_radius, BLACK)
 
+        begin_scissor_mode(int(self.x), int(self.y), int(self.width), int(self.height))
 
         for element in self._elements:
             if element == self.element_hovered:
@@ -88,4 +90,4 @@ class Listbox:
 
             draw_text_ex(self.font, element["text"], Vector2(text_x, text_y), self.font_size, 1.0, self.element_text_colour)
             
-
+        end_scissor_mode()
