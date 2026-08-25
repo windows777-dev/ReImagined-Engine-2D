@@ -40,7 +40,9 @@ fredoka = FontHelper.LoadFont("Fredoka-SemiBold.ttf")
 
 actor_tween = Tween(tween_type=TweenType.LINEAR, position=Vector2(test_actor.x, test_actor.y), final_position=Vector2(700, 700), speed=1.0)
 
-test_event = Event("test_event")
+test_event = Event(name="te")
+
+event_mgr.register_event(test_event)
 
 def draw():
     clear_background(GRAY)
@@ -61,14 +63,19 @@ def draw():
 
 def update():
 
-    if get_random_value(0, 5) == 2:
+    if 2 == 2:
         test_event.invoke()
 
-    if event_mgr.invoked("test_event"):
-        close_window()
-
     event_mgr.update()
+    
 
+    if event_mgr.invoked("te"):
+        print("Big pearlian")
+
+
+    
+
+    
 
 while not window_should_close():
     Configuration.dt = get_frame_time()

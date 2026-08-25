@@ -22,7 +22,10 @@ class EventManager:
 
     def update(self):
 
+        self.events = [e for e in self.events if e.life_time <= 30.0]
+
         for event in self.events:
+            event.life_time += Configuration.dt
             if event.invoked:
                 self.fired_events.append(event)
                 event.invoked = False
