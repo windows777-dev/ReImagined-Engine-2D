@@ -43,8 +43,8 @@ actor_tween = Tween(tween_type=TweenType.LINEAR, position=Vector2(test_actor.x, 
 
 test_event = Event(name="te")
 test_listbox = Listbox()
-test_listbox.add_element("Tom pearl")
-test_listbox.add_element("Tom pear1l")
+test_listbox.add_element("test")
+test_listbox.add_element("test2")
 
 event_mgr.register_event(test_event)
 
