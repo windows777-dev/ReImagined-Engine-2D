@@ -74,7 +74,7 @@ def update():
     
 
     if event_mgr.invoked("te"):
-        print("Big pearlian")
+        print("Invoked!")
 
 
     
