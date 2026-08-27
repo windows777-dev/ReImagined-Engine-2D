@@ -7,6 +7,7 @@ from UI.textbox import *
 from UI.slider import *
 from UI.text import *
 from UI.listbox import *
+from UI.messagebox import *
 from Utilities.timer import *
 from Utilities.window_funcs import *
 from Utilities.actor import *
@@ -46,6 +47,8 @@ test_listbox = Listbox()
 test_listbox.add_element("test")
 test_listbox.add_element("test2")
 
+test_msg_box = MessageBox(message="Nah dawg as the game dev I lowk gotta question what the FUCK you are trying to do here")
+
 event_mgr.register_event(test_event)
 
 def draw():
@@ -64,6 +67,7 @@ def draw():
     #test_slider.draw()
     #test_tb.draw()
     #test_text.draw()
+    test_msg_box.draw()
 
 def update():
 
@@ -79,12 +83,19 @@ def update():
 
     
 
-    
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
 while not window_should_close():
     Configuration.dt = get_frame_time()
+    if is_key_pressed(KeyboardKey.KEY_F2):
+        
+        filename = f"screenshot_{get_random_value(0, 100000)}.png"
+        take_screenshot(filename)
+        print(f"SAVED TO: {filename}")
 
     begin_drawing()
+
+
 
     draw()
     update()

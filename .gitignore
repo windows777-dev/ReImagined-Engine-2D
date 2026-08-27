@@ -3,3 +3,4 @@ __pycache__/
 dist/
 project_main.py
 ideas.txt
+screenshot_*
