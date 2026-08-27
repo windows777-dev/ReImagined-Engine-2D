@@ -47,7 +47,7 @@ test_listbox = Listbox()
 test_listbox.add_element("test")
 test_listbox.add_element("test2")
 
-test_msg_box = MessageBox(message="Nah dawg as the game dev I lowk gotta question what the FUCK you are trying to do here")
+test_msg_box = MessageBox(message="Test Text")
 
 event_mgr.register_event(test_event)
 
