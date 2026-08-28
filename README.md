@@ -50,7 +50,7 @@ from Utilities.timer import *
 from Utilities.window_funcs import *
 from Utilities.actor import *
 
-init_window(Configuration.WIDTH, Configuration.HEIGHT, Configuration.TITLE)
+init_window(Game.WIDTH, Game.HEIGHT, Game.TITLE)
 set_target_fps(120)
 toggle_fullscreen()
 
@@ -63,7 +63,7 @@ test_actor = Actor("aaron-wilder", 500, 500)
 fredoka = FontHelper.LoadFont("Fredoka-SemiBold.ttf")
 
 while not window_should_close():
-    Configuration.dt = get_frame_time()
+    Game.dt = get_frame_time()
 
     begin_drawing()
 
@@ -135,6 +135,37 @@ It says "Enter Text Here..." now but let's change it to "Enter username here..."
 Easy, just like that!
 (Don't forget the .draw() in the render loop!)
 
-# Checkboxes
+# Listboxes
+
+Listboxes are **INCREDIBLE**, they're one of my most favourite things about this framework.
+If you have the time, please check out the code for them, I am really proud of myself for coding it.
+
+Anyways, listboxes (once again) are pretty simple.
+
+Listboxes have a selected_item attribute so if you feel the need to, use it!
+
+```
+test_listbox = Listbox(x=500, y=500)
+test_listbox.add_element("item1")
+test_listbox.add_element("item2")
+```
+(Don't forget the .draw() in the render loop!)
+
+![Listbox preview](assets/gallery/listbox.gif)
+(Colours are off due to a bug in Windows)
+
+# Message boxes
+
+Messageboxes look so cool and are very versatile.
+You can drag them around, but if you feel the need; you make them undraggable
+
+```
+test_msg_box = MessageBox(title="Test title", message="Test Text")
+```
+![Listbox preview](assets/gallery/messagebox.gif)
+
+(Once agin, Do NOT forget the .draw())
+
+
 
 ## Utilities

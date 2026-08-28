@@ -43,11 +43,11 @@ fredoka = FontHelper.LoadFont("Fredoka-SemiBold.ttf")
 actor_tween = Tween(tween_type=TweenType.LINEAR, position=Vector2(test_actor.x, test_actor.y), final_position=Vector2(700, 700), speed=1.0)
 
 test_event = Event(name="te")
-test_listbox = Listbox()
+test_listbox = Listbox(x=500, y=500)
 test_listbox.add_element("test")
 test_listbox.add_element("test2")
 
-test_msg_box = MessageBox(message="Test Text")
+test_msg_box = MessageBox(title="Test title", message="Test Text")
 
 Game.event_mgr.register_event(test_event)
 
@@ -61,7 +61,7 @@ def draw():
     test_actor.x = actor_tween.position.x
     test_actor.y = actor_tween.position.y
 
-    test_listbox.draw()
+    #test_listbox.draw()
 
     #test_actor.draw()
     #test_slider.draw()

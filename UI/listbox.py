@@ -4,7 +4,7 @@ from UI.font_helper import *
 
 class Listbox:
 
-    def __init__(self, x=20, y=20, width=500, height=700, corner_radius=0.1, border_radius=5, font=F"Montserrat-ExtraBold.ttf", font_size=24, pady=10, element_height=50, bg_colour=Color(255,255,255,255), element_colour=Color(58,58,58,255), hover_colour=Color(62, 108, 249, 255), element_text_colour = Color(255,255,255,255)):
+    def __init__(self, x=20, y=20, width=500, height=700, corner_radius=0.1, border_radius=5, font=F"Montserrat-ExtraBold.ttf", font_size=24, pady=10, element_height=50, bg_colour=Color(255,255,255,255), element_colour=Color(0,0,175,255), hover_colour=Color(0,0,125,255), element_text_colour = Color(255,255,255,255), selected_colour=Color(0,0,125,255)):
         self.x = x
         self.y = y
         self.width = width
@@ -24,30 +24,30 @@ class Listbox:
 
 
         self.selected_element = None
-
-        self.elements = []
         self._elements = []
         self.offset_y = 0 
 
         self.element_hovered_index = None
         self.element_hovered = None
+
+        self.selected_colour = selected_colour
         
 
         
-    def add_element(self, text):
+    def add_element(self, text, **kwargs):
         
 
-        index = len(self.elements)
+        index = len(self._elements)
 
         internal_element = {
             "x" : self.x + 10,
             "y" : self.y + (self.element_height + 10) * index,
             "width" : self.width - 20,
             "height" : self.element_height,
-            "text" : text
+            "text" : text,
+            "other_data" : kwargs # You can add UUIDs to the listbox
         }
 
-        self.elements.append(text)
         self._elements.append(internal_element)
 
     def check_element_hovered(self):
@@ -61,6 +61,9 @@ class Listbox:
                 break
 
     def update(self):
+        if self.element_hovered and is_mouse_button_down(MouseButton.MOUSE_BUTTON_LEFT):
+            self.selected_element = self.element_hovered
+
         if check_collision_point_rec(get_mouse_position(), Rectangle(self.x, self.y, self.width, self.height)):
             self.offset_y -= int(get_mouse_wheel_move() * 7)
         
@@ -76,6 +79,8 @@ class Listbox:
         for element in self._elements:
             if element == self.element_hovered:
                 draw_rectangle_rounded(Rectangle(element["x"], element["y"] + self.offset_y, element["width"], element["height"]), self.corner_radius, 4, self.hover_colour)
+            elif element == self.selected_element:
+                draw_rectangle_rounded(Rectangle(element["x"], element["y"] + self.offset_y, element["width"], element["height"]), self.corner_radius, 4, self.selected_colour)
             else:
                 draw_rectangle_rounded(Rectangle(element["x"], element["y"] + self.offset_y, element["width"], element["height"]), self.corner_radius, 4, self.element_colour)
 
