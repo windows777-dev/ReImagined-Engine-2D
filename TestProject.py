@@ -16,7 +16,7 @@ from EventManager.eventmanager import *
 from Tween.tweenhelper import *
 
 set_config_flags(ConfigFlags.FLAG_BORDERLESS_WINDOWED_MODE)
-init_window(Configuration.WIDTH, Configuration.HEIGHT, Configuration.TITLE)
+init_window(Game.WIDTH, Game.HEIGHT, Game.TITLE)
 set_target_fps(120)
 
 
@@ -26,7 +26,7 @@ set_window_icon(icon)
 
 bg = WindowUtils.GetBackground("yes.png")
 
-event_mgr = EventManager()
+
 
 
 test_frame = Frame(x=(get_screen_width() - 500) / 2, y=(get_screen_height() - 500) / 2)
@@ -49,7 +49,7 @@ test_listbox.add_element("test2")
 
 test_msg_box = MessageBox(message="Test Text")
 
-event_mgr.register_event(test_event)
+Game.event_mgr.register_event(test_event)
 
 def draw():
     clear_background(GRAY)
@@ -74,10 +74,10 @@ def update():
     if 2 == 2:
         test_event.invoke()
 
-    event_mgr.update()
+    Game.event_mgr.update()
     
 
-    if event_mgr.invoked("te"):
+    if Game.event_mgr.invoked("te"):
         print("Invoked!")
 
 
@@ -86,7 +86,7 @@ def update():
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 while not window_should_close():
-    Configuration.dt = get_frame_time()
+    Game.dt = get_frame_time()
     if is_key_pressed(KeyboardKey.KEY_F2):
         
         filename = f"screenshot_{get_random_value(0, 100000)}.png"

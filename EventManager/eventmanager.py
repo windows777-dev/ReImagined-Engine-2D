@@ -1,5 +1,4 @@
 from pyray import *
-from config import *
 
 class EventManager:
 
@@ -25,7 +24,7 @@ class EventManager:
         self.events = [e for e in self.events if e.life_time <= 30.0]
 
         for event in self.events:
-            event.life_time += Configuration.dt
+            event.life_time += get_frame_time()
             if event.invoked:
                 self.fired_events.append(event)
                 event.invoked = False
